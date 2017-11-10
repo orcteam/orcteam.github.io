@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="post type-post status-publish format-standard hentry category-tin-tuc tag-android tag-btalk tag-mobile entry-box clearfix">
+
+  <header class="post-header">
+    <h4 class="entry-title">{{ page.title }}</h4>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+    {% if page.category %}
+        {% for site_category in site.data.categories %}
+            {% if site_category.slug == page.category %}
+                {% assign category = site_category %}
+            {% endif %}
+        {% endfor %}
+        {% if category %}
+            {% capture category_content %} in <span class="label" style="background-color:{{ category.color }}"><a href="/category/{{ category.slug }}/">{{ category.name }}</a></span>{% endcapture %}
+        {% endif %}
+    {% else %}
+        {% assign category_content = '' %}
+    {% endif %}
+
+</div>
+
+<hr/>
+<div class="fb-like" data-href="{{site.url}}{{page.url}}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+<h2>Comments</h2>
+<div class="fb-comments" data-href="{{site.url}}{{page.url}}" data-num-ss="4" data-width="706"></div>
