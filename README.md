@@ -1,7 +1,5 @@
 The Operational Research Computing
-
-
-My Email vimanhtuong585@gmail.com
+ORC Team Work In Ha Noi VietNam You Can Contact Foundation Email vimanhtuong585@gmail.com
 
 
 -----BEGIN PGP PUBLIC KEY BLOCK-----
